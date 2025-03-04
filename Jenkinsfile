@@ -1,14 +1,15 @@
-pipeline{
-  agen any
-   stages{
-     stage('version'){
-          step{
-          sh 'python3 --version'
-     }
-     stage('pandas'){
-      step{
-      sh 'python3 src/pandas.py'
-      }
-     }
-   }
+pipeline {
+    agent any
+    stages {
+        stage('version') {
+            steps {
+                sh 'python3 --version'
+            }
+        }
+        stage('pandas') {
+            steps {
+                sh 'python3 pandas.py'
+            }
+        }
+    }
 }
