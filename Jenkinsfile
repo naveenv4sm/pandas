@@ -1,10 +1,5 @@
 pipeline {
     agent any
-
-    tools {
-        python 'python3'
-    }
-
     stages {
         stage('Version Check') {
             steps {
