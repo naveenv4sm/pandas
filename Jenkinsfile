@@ -1,15 +1,21 @@
 pipeline {
     agent any
+
+    tools {
+        python 'python3'
+    }
+
     stages {
-        stage('version') {
+        stage('Version Check') {
             steps {
                 sh 'python3 --version'
             }
         }
-        stage('pandas') {
+        stage('Run Pandas Script') {
             steps {
                 sh 'python3 pandas.py'
             }
         }
     }
 }
+
